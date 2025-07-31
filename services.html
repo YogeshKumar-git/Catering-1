@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Indian Menu - Spice Delight Catering</title>
+    <meta name="description" content="Explore our authentic South Indian dishes available for all catering services including weddings, receptions, engagements, birthdays, and corporate events.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E63946',
+                        secondary: '#1D3557',
+                        accent: '#F1FAEE',
+                        light: '#A8DADC',
+                        dark: '#457B9D',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .menu-header-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1596797038530-2c107229654b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1475&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .dish-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .dish-card {
+            transition: all 0.3s ease;
+        }
+        
+        .menu-nav {
+            position: sticky;
+            top: 80px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <span class="text-primary text-2xl font-serif font-bold">Spice Delight</span>
+                        <span class="text-secondary text-lg ml-2">Catering</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-secondary hover:text-primary font-medium">Home</a>
+                    <a href="index.html#services" class="text-secondary hover:text-primary font-medium">Services</a>
+                    <a href="index.html#about" class="text-secondary hover:text-primary font-medium">About</a>
+                    <a href="index.html#testimonials" class="text-secondary hover:text-primary font-medium">Testimonials</a>
+                    <a href="services.html" class="text-primary font-medium">South Indian Menu</a>
+                    <a href="index.html#contact" class="bg-primary text-white px-4 py-2 rounded-md hover:bg-red-700 transition duration-300">Contact Us</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-secondary focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="flex flex-col space-y-4 mt-4 pb-4">
+                    <a href="index.html" class="text-secondary hover:text-primary font-medium">Home</a>
+                    <a href="index.html#services" class="text-secondary hover:text-primary font-medium">Services</a>
+                    <a href="index.html#about" class="text-secondary hover:text-primary font-medium">About</a>
+                    <a href="index.html#testimonials" class="text-secondary hover:text-primary font-medium">Testimonials</a>
+                    <a href="services.html" class="text-primary font-medium">South Indian Menu</a>
+                    <a href="index.html#contact" class="bg-primary text-white px-4 py-2 rounded-md hover:bg-red-700 transition duration-300 inline-block">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Header -->
+    <header class="menu-header-bg py-32 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-serif font-bold mb-6">Our South Indian Menu</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">Authentic flavors from the heart of South India for all your special occasions</p>
+            <a href="index.html#contact" class="bg-primary text-white px-8 py-3 rounded-md hover:bg-red-700 transition duration-300 text-lg font-medium">Request a Custom Menu</a>
+        </div>
+    </header>
+
+    <!-- Menu Navigation -->
+    <div class="bg-secondary menu-nav">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center py-4 space-x-2 md:space-x-6 overflow-x-auto whitespace-nowrap">
+                <a href="#starters" class="text-white hover:text-primary px-3 py-2 font-medium transition duration-300">Starters</a>
+                <a href="#main-course" class="text-white hover:text-primary px-3 py-2 font-medium transition duration-300">Main Course</a>
+                <a href="#rice-varieties" class="text-white hover:text-primary px-3 py-2 font-medium transition duration-300">Rice Varieties</a>
+                <a href="#dosas" class="text-white hover:text-primary px-3 py-2 font-medium transition duration-300">Dosas</a>
+                <a href="#idlis" class="text-white hover:text-primary px-3 py-2 font-medium transition duration-300">Idlis & Vadas</a>
+                <a href="#curries" class="text-white hover:text-primary px-3 py-2 font-medium transition duration-300">Curries</a>
+                <a href="#desserts" class="text-white hover:text-primary px-3 py-2 font-medium transition duration-300">Desserts</a>
+                <a href="#beverages" class="text-white hover:text-primary px-3 py-2 font-medium transition duration-300">Beverages</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Introduction -->
+    <section class="py-16 bg-accent">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-secondary mb-6">Authentic South Indian Cuisine</h2>
+                <p class="text-lg text-gray-700 mb-8">Our menu features a wide variety of authentic South Indian dishes prepared by our master chefs using traditional recipes and the finest ingredients. We can customize our menu to suit your specific event needs and dietary requirements.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="bg-white px-6 py-3 rounded-full shadow-md text-secondary font-medium">
+                        <i class="fas fa-leaf text-primary mr-2"></i> Vegetarian Options
+                    </div>
+                    <div class="bg-white px-6 py-3 rounded-full shadow-md text-secondary font-medium">
+                        <i class="fas fa-drumstick-bite text-primary mr-2"></i> Non-Vegetarian Options
+                    </div>
+                    <div class="bg-white px-6 py-3 rounded-full shadow-md text-secondary font-medium">
+                        <i class="fas fa-seedling text-primary mr-2"></i> Vegan Options
+                    </div>
+                    <div class="bg-white px-6 py-3 rounded-full shadow-md text-secondary font-medium">
+                        <i class="fas fa-ban text-primary mr-2"></i> Gluten-Free Options
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Starters Section -->
+    <section id="starters" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold text-secondary mb-12 text-center">Starters & Appetizers</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Starter 1 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Vegetable Pakora" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Vegetable Pakora</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Crispy fritters made with assorted vegetables, gram flour, and aromatic spices.</p>
+                    </div>
+                </div>
+                <!-- Starter 2 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1626776876729-bab4369a5a5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Chicken 65" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Chicken 65</h3>
+                            <span class="bg-primary bg-opacity-10 text-primary text-xs px-2 py-1 rounded-full">Non-Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Spicy, deep-fried chicken marinated with red chillies, ginger, garlic, and other spices.</p>
+                    </div>
+                </div>
+                <!-- Starter 3 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Medu Vada" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Medu Vada</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Crispy, savory doughnut-shaped fritters made from urad dal, served with coconut chutney and sambar.</p>
+                    </div>
+                </div>
+                <!-- Starter 4 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1606471191009-63994c53433b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Paneer Tikka" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Paneer Tikka</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Chunks of paneer marinated in spices and grilled to perfection.</p>
+                    </div>
+                </div>
+                <!-- Starter 5 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Prawn Fry" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Prawn Fry</h3>
+                            <span class="bg-primary bg-opacity-10 text-primary text-xs px-2 py-1 rounded-full">Non-Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Spicy and tangy prawns marinated with South Indian spices and fried to perfection.</p>
+                    </div>
+                </div>
+                <!-- Starter 6 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1589647363585-f4a7d3877b10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Samosa" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Samosa</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Triangular pastry filled with spiced potatoes, peas, and sometimes minced meat, deep-fried until crispy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Course Section -->
+    <section id="main-course" class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold text-secondary mb-12 text-center">Main Course</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Main Course 1 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1585937421612-70a008356c36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80" alt="Chicken Chettinad" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Chicken Chettinad</h3>
+                            <span class="bg-primary bg-opacity-10 text-primary text-xs px-2 py-1 rounded-full">Non-Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">A fiery chicken curry from the Chettinad region, known for its complex blend of spices and aromatics.</p>
+                    </div>
+                </div>
+                <!-- Main Course 2 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1631292784640-2b24be784d1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Vegetable Kurma" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Vegetable Kurma</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Mixed vegetables cooked in a creamy coconut and cashew sauce with aromatic spices.</p>
+                    </div>
+                </div>
+                <!-- Main Course 3 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1628294895950-9805252327bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Fish Curry" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Fish Curry</h3>
+                            <span class="bg-primary bg-opacity-10 text-primary text-xs px-2 py-1 rounded-full">Non-Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Fresh fish cooked in a tangy tamarind sauce with mustard seeds, curry leaves, and coconut.</p>
+                    </div>
+                </div>
+                <!-- Main Course 4 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1371&q=80" alt="Paneer Butter Masala" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Paneer Butter Masala</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Paneer cubes in a rich, creamy tomato sauce flavored with butter and aromatic spices.</p>
+                    </div>
+                </div>
+                <!-- Main Course 5 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Mutton Sukka" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Mutton Sukka</h3>
+                            <span class="bg-primary bg-opacity-10 text-primary text-xs px-2 py-1 rounded-full">Non-Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Dry mutton dish cooked with onions, tomatoes, and a blend of South Indian spices.</p>
+                    </div>
+                </div>
+                <!-- Main Course 6 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1505253758473-96b7015fcd40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80" alt="Kadai Vegetable" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Kadai Vegetable</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Mixed vegetables cooked with bell peppers in a spicy tomato-based gravy with kadai masala.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rice Varieties Section -->
+    <section id="rice-varieties" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold text-secondary mb-12 text-center">Rice Varieties</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Rice 1 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1516714435131-44d6b64dc6a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80" alt="Vegetable Biryani" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Vegetable Biryani</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Fragrant basmati rice cooked with mixed vegetables, herbs, and aromatic spices.</p>
+                    </div>
+                </div>
+                <!-- Rice 2 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Chicken Biryani" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Chicken Biryani</h3>
+                            <span class="bg-primary bg-opacity-10 text-primary text-xs px-2 py-1 rounded-full">Non-Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Aromatic basmati rice layered with marinated chicken, fried onions, and spices.</p>
+                    </div>
+                </div>
+                <!-- Rice 3 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1475&q=80" alt="Lemon Rice" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Lemon Rice</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Rice flavored with lemon juice, turmeric, mustard seeds, peanuts, and curry leaves.</p>
+                    </div>
+                </div>
+                <!-- Rice 4 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Curd Rice" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Curd Rice</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Rice mixed with yogurt, tempered with mustard seeds, curry leaves, and garnished with pomegranate seeds.</p>
+                    </div>
+                </div>
+                <!-- Rice 5 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1596579558005-127dd9bb84d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Tomato Rice" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Tomato Rice</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Rice cooked with tomatoes, onions, and spices, tempered with mustard seeds and curry leaves.</p>
+                    </div>
+                </div>
+                <!-- Rice 6 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1626102555872-0e39b4d3c181?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Coconut Rice" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Coconut Rice</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Rice flavored with grated coconut, lentils, and spices, tempered with curry leaves and mustard seeds.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dosas Section -->
+    <section id="dosas" class="py-16 bg-accent">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold text-secondary mb-12 text-center">Dosas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dosa 1 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Plain Dosa" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Plain Dosa</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Thin, crispy crepe made from fermented rice and lentil batter, served with sambar and chutney.</p>
+                    </div>
+                </div>
+                <!-- Dosa 2 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Masala Dosa" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Masala Dosa</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Crispy dosa filled with spiced potato filling, served with sambar and coconut chutney.</p>
+                    </div>
+                </div>
+                <!-- Dosa 3 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1630409351217-bc4fa6422075?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Rava Dosa" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Rava Dosa</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Crispy, lacy crepe made from semolina, rice flour, and spices, served with chutney and sambar.</p>
+                    </div>
+                </div>
+                <!-- Dosa 4 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1626074353765-517a681e40be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Onion Dosa" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Onion Dosa</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Dosa topped with finely chopped onions, green chilies, and cilantro, served with chutney and sambar.</p>
+                    </div>
+                </div>
+                <!-- Dosa 5 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1627308595171-d1b5d67129c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Ghee Roast Dosa" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Ghee Roast Dosa</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Extra crispy dosa roasted with ghee (clarified butter), served with chutney and sambar.</p>
+                    </div>
+                </div>
+                <!-- Dosa 6 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1626074353765-517a681e40be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Paper Dosa" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Paper Dosa</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Extra thin and crispy dosa that is spread very thin like paper, served with chutney and sambar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Idlis & Vadas Section -->
+    <section id="idlis" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold text-secondary mb-12 text-center">Idlis & Vadas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Idli 1 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1589301761966-e6506b634875?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Plain Idli" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Plain Idli</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Soft, steamed rice cakes made from fermented rice and lentil batter, served with sambar and chutney.</p>
+                    </div>
+                </div>
+                <!-- Idli 2 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Rava Idli" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Rava Idli</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Idli made with semolina instead of rice, flavored with mustard seeds, cashews, and curry leaves.</p>
+                    </div>
+                </div>
+                <!-- Idli 3 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Medu Vada" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Medu Vada</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Crispy, savory doughnut-shaped fritters made from urad dal, served with coconut chutney and sambar.</p>
+                    </div>
+                </div>
+                <!-- Idli 4 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1630409351217-bc4fa6422075?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Idli Sambar" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Idli Sambar</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Soft idlis served with a flavorful lentil-based vegetable stew and coconut chutney.</p>
+                    </div>
+                </div>
+                <!-- Idli 5 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1626074353765-517a681e40be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Podi Idli" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Podi Idli</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Idlis tossed with spicy gun powder (podi) and ghee, a flavorful twist to plain idlis.</p>
+                    </div>
+                </div>
+                <!-- Idli 6 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1627308595171-d1b5d67129c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Masala Vada" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Masala Vada</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Crispy fritters made from chana dal (split chickpeas), flavored with onions, chilies, and spices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curries Section -->
+    <section id="curries" class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold text-secondary mb-12 text-center">Curries & Side Dishes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Curry 1 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1631292784640-2b24be784d1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sambar" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Sambar</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Lentil-based vegetable stew flavored with tamarind and sambar powder, a staple in South Indian cuisine.</p>
+                    </div>
+                </div>
+                <!-- Curry 2 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1371&q=80" alt="Rasam" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Rasam</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Tangy, spicy soup made with tamarind, tomatoes, pepper, and other spices, known for its digestive properties.</p>
+                    </div>
+                </div>
+                <!-- Curry 3 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1628294895950-9805252327bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Avial" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Avial</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Mixed vegetables cooked with coconut, yogurt, and curry leaves, a Kerala specialty.</p>
+                    </div>
+                </div>
+                <!-- Curry 4 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1585937421612-70a008356c36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80" alt="Poriyal" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Poriyal</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Stir-fried vegetables seasoned with mustard seeds, curry leaves, and grated coconut.</p>
+                    </div>
+                </div>
+                <!-- Curry 5 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Kootu" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Kootu</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Vegetables and lentils cooked together with coconut and spices, a nutritious side dish.</p>
+                    </div>
+                </div>
+                <!-- Curry 6 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1505253758473-96b7015fcd40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80" alt="Pachadi" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Pachadi</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Yogurt-based side dish with vegetables or fruits, tempered with mustard seeds and curry leaves.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Desserts Section -->
+    <section id="desserts" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold text-secondary mb-12 text-center">Desserts</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dessert 1 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Payasam" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Payasam</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Sweet pudding made with milk, rice or vermicelli, sugar, and flavored with cardamom and nuts.</p>
+                    </div>
+                </div>
+                <!-- Dessert 2 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1626776876729-bab4369a5a5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Mysore Pak" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Mysore Pak</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Rich, fudge-like sweet made from gram flour, ghee, and sugar, a specialty from Mysore.</p>
+                    </div>
+                </div>
+                <!-- Dessert 3 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Jalebi" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Jalebi</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Deep-fried pretzel-shaped sweets soaked in sugar syrup, crispy on the outside and syrupy inside.</p>
+                    </div>
+                </div>
+                <!-- Dessert 4 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1606471191009-63994c53433b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Gulab Jamun" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Gulab Jamun</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Soft, spongy milk-solid balls soaked in rose-flavored sugar syrup, a popular dessert for celebrations.</p>
+                    </div>
+                </div>
+                <!-- Dessert 5 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Rasmalai" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Rasmalai</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Soft cottage cheese dumplings soaked in sweetened, thickened milk flavored with cardamom and saffron.</p>
+                    </div>
+                </div>
+                <!-- Dessert 6 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1589647363585-f4a7d3877b10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Laddu" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Laddu</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Sweet, round balls made from flour, sugar, and ghee, often flavored with nuts and cardamom.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beverages Section -->
+    <section id="beverages" class="py-16 bg-accent">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold text-secondary mb-12 text-center">Beverages</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Beverage 1 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Filter Coffee" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Filter Coffee</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Traditional South Indian coffee made with freshly ground coffee beans and chicory, served with milk and sugar.</p>
+                    </div>
+                </div>
+                <!-- Beverage 2 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Masala Chai" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Masala Chai</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Spiced tea made with a blend of aromatic spices, tea leaves, milk, and sugar.</p>
+                    </div>
+                </div>
+                <!-- Beverage 3 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Buttermilk" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Buttermilk (Chaas)</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Refreshing yogurt-based drink flavored with cumin, curry leaves, and coriander, perfect for hot days.</p>
+                    </div>
+                </div>
+                <!-- Beverage 4 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1527281400683-1aae777175f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Lassi" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Lassi</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Creamy yogurt-based drink that can be sweet or savory, often flavored with fruits or spices.</p>
+                    </div>
+                </div>
+                <!-- Beverage 5 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Coconut Water" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Fresh Coconut Water</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Natural, refreshing drink served directly from tender coconuts, rich in electrolytes.</p>
+                    </div>
+                </div>
+                <!-- Beverage 6 -->
+                <div class="dish-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Fruit Juices" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold text-secondary">Fresh Fruit Juices</h3>
+                            <span class="bg-light text-secondary text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Variety of freshly squeezed seasonal fruit juices including mango, pineapple, watermelon, and more.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Menu CTA -->
+    <section class="py-20 bg-secondary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">Create Your Custom Menu</h2>
+            <p class="text-xl mb-10 max-w-3xl mx-auto">Our culinary team can create a customized menu for your specific event needs. Contact us to discuss your preferences and dietary requirements.</p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="index.html#contact" class="bg-primary text-white px-8 py-3 rounded-md hover:bg-red-700 transition duration-300 text-lg font-medium">Request a Quote</a>
+                <a href="index.html#services" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-md hover:bg-white hover:text-secondary transition duration-300 text-lg font-medium">View Catering Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-2xl font-serif font-bold mb-6">Spice Delight Catering</h3>
+                    <p class="mb-4">Bringing authentic South Indian flavors to your special occasions since 2010.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-white hover:text-primary transition duration-300">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary transition duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary transition duration-300">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary transition duration-300">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-light hover:text-primary transition duration-300">Home</a></li>
+                        <li><a href="index.html#services" class="text-light hover:text-primary transition duration-300">Services</a></li>
+                        <li><a href="index.html#about" class="text-light hover:text-primary transition duration-300">About Us</a></li>
+                        <li><a href="services.html" class="text-light hover:text-primary transition duration-300">South Indian Menu</a></li>
+                        <li><a href="index.html#testimonials" class="text-light hover:text-primary transition duration-300">Testimonials</a></li>
+                        <li><a href="index.html#contact" class="text-light hover:text-primary transition duration-300">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Services -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Our Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#services" class="text-light hover:text-primary transition duration-300">Wedding Catering</a></li>
+                        <li><a href="index.html#services" class="text-light hover:text-primary transition duration-300">Reception Catering</a></li>
+                        <li><a href="index.html#services" class="text-light hover:text-primary transition duration-300">Engagement Parties</a></li>
+                        <li><a href="index.html#services" class="text-light hover:text-primary transition duration-300">Birthday Celebrations</a></li>
+                        <li><a href="index.html#services" class="text-light hover:text-primary transition duration-300">Corporate Events</a></li>
+                        <li><a href="index.html#services" class="text-light hover:text-primary transition duration-300">House Warming</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary"></i>
+                            <span>123 Catering Street, Foodville, Chennai, Tamil Nadu, India</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-primary"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary"></i>
+                            <span>info@spicedelight.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-3 text-primary"></i>
+                            <span>Mon-Sat: 9:00 AM - 8:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p>&copy; 2023 Spice Delight Catering. All rights reserved.</p>
+                    <div class="mt-4 md:mt-0">
+                        <a href="#" class="text-light hover:text-primary transition duration-300 mx-3">Privacy Policy</a>
+                        <a href="#" class="text-light hover:text-primary transition duration-300 mx-3">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
